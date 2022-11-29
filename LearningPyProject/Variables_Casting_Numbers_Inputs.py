@@ -5,6 +5,13 @@ print("I like", x, "fish.") #x=4 is removed, because your 2nd assigned value wil
 y= z= "Apurbo"
 print(type(y), z) # Only the type will be shown for y, and value for z.
 
+e= '''
+    This is a multiline string.
+    And you should learn how to use it with a variable.
+    That's it.
+    '''
+print(e)
+
 a= str(3) # Now it's assigned as a string, not integer.
 A= float(3)
 print(a, A) # To put different types together, just use comma, and for same types, use (+).
