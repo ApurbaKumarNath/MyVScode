@@ -78,5 +78,5 @@ print(random.randrange(995,999))
 
 # Now use input:
 l, t= input("Enter 1st number: "), input("Enter 2nd number: ")
-print("The numbers you gave are strings:", l+t) # Whatever you input are strings. So, you need to change those whenever you need. 
+print("The numbers you gave are strings:", l+ ', ' +t) # Whatever you input are strings. So, you need to change those whenever you need. 
 print("The sum of your given numbers is:", int(l)+int(t))
