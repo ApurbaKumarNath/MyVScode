@@ -11,6 +11,10 @@ A p u r b o   l i ....
 
 Here, if you use x[1:3], python always skips the last value. So, it will show: pu
 
+One more thing. You can think of it like 3-1=2. That means it'll show 2nd and 3rd value. 
+But when thinking like this, you shouldn't think the 1st value = 0. The 1st one is the 1st value.
+When dealing with negative values, don't use this way of thinking as it won't work.
+
 Now, even if you use minus(-), 0 will always be the 1st letter (0=A), and it'll count backwards like this:
 0 -1 -2 -3 -4 -5 -6 -7 -8 -...-123
 A  .  e  f  i  l     f  o  ... p
@@ -36,6 +40,7 @@ print(x.isalnum()) # This checks if the str is alphanumeric(meaning alphabet let
 print(x.isalpha()) # This checks if all the characters are alphabet letters (a-z).
 print(x.endswith('ife.')) # Checks if the str ends with the letters I've given here.
 print(x.count('a')) # Checks how many 'a's are in the str.
+print(x.count('')) # Counts how many letters are there, but it adds 1 more to the count. For example: For 'Y', answer is: 2.
 print(x.capitalize(), '\n') # This capitalizes only the 1st letter of the text. But I've already capitalized that.
 print(x.lower(), '\n') # This will convert the str into lowercase letters.
 print(x.upper(), '\n') # This will convert the str into uppercase letters.
@@ -43,7 +48,9 @@ print(x.find('is')) # This will show where the word 'is' is by showing me the po
 print(x.replace('Apurbo', 'Apurba'))
 print(x.strip()) # This method removes any whitespace from the beginning or the end.
 b=x.split('o')
-print(b) # This method splits the string into substrings if it finds instances of the separator. Here, 'o' will be removed.
+print(b) # This method splits the string into substrings if it finds instances of the separator. Here, 'o' is set as a separator, so, it will be removed.
+print(x.split()) # Here spaces were detected as separators, so, all spaces were removed, and substrings were created.
+print(len(x.split())) # Now you will be able to see how many words you wrote.
 
 # To check if a certain phrase or character is present in a string, we can use the keyword in:
 print('Apurba' in x)

@@ -14,7 +14,7 @@ print(e)
 
 a= str(3) # Now it's assigned as a string, not integer.
 A= float(3)
-print(a, A) # To put different types together, just use comma, and for same types, use (+).
+print(a, A) # To put different types together, just use comma, and those will be separated with spaces. And for same types, use (+), but these won't be separated with spaces.
 
 """
 Legal variable names:
@@ -49,8 +49,8 @@ print(i) # This will print the global variable.
 
 # It's time to use the global keyword.
 def k():
-    global j
-    j= ', global variable'
+    global j 
+    j= ', global variable' #Now it is set as a global variable because of "global j". So, it's(j) not a local variable.
     print(i + j)
 k()
 print(j + '.')
@@ -71,6 +71,13 @@ print(2 * 'This is fun.\n')
 k= 2E10 # Here E or e is used to indicate power of 10.
 o= 2J # Here J or j is used to indicate complex or imaginary number.
 print(pow(o,2), k*5) # Here pow() = 'To the power of any number'.
+# Another way of using power is:
+print(2J**2)
+# To get the floor value or least value:
+print(5//2)
+print(-5.0//2)
+# To get the modulus:
+print(5%2) # It basically gives you the remainder.
 
 # Now see the use of random numbers:
 import random
@@ -80,3 +87,5 @@ print(random.randrange(995,999))
 l, t= input("Enter 1st number: "), input("Enter 2nd number: ")
 print("The numbers you gave are strings:", l+ ', ' +t) # Whatever you input are strings. So, you need to change those whenever you need. 
 print("The sum of your given numbers is:", int(l)+int(t))
+another_way=int(input('Enter: '))
+print("Your number: ", another_way)
