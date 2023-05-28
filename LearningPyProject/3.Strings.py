@@ -5,25 +5,20 @@ Sometimes he feels really bored of life. '''
 print(len(x)) # This shows the length of the text.
 '''
 Number system with strings: (You're gonna learn slicing here.)
+In Strings,
+0 1 2 3 4 5 6
+S t r i n g s
+Here, if you use x[1:3], python always skips the last value. So, it will show: tr
 
-0 1 2 3 4 5 6 7 8 ...123
-A p u r b o   l i ....
+Now, if you use minus(-), 0 won't exist, and it'll count backwards like this:
+-1 -2 -3 -4 -5 -6 -7
+ s  g  n  i  r  t  S
+If you don't input a value and keep it like this: x[::], by default it'll count left to right like this: x[0:last number:1].
+x[Start:End:Step] this is the formula.
 
-Here, if you use x[1:3], python always skips the last value. So, it will show: pu
-
-One more thing. You can think of it like 3-1=2. That means it'll show 2nd and 3rd value. 
-But when thinking like this, you shouldn't think the 1st value = 0. The 1st one is the 1st value.
-When dealing with negative values, don't use this way of thinking as it won't work.
-
-Now, even if you use minus(-), 0 will always be the 1st letter (0=A), and it'll count backwards like this:
-0 -1 -2 -3 -4 -5 -6 -7 -8 -...-123
-A  .  e  f  i  l     f  o  ... p
-
-If you don't input a value and keep it like this: x[::], by default it will count this: x[0:last number:1].
-
-And if it is x[::1] or x[::], it'll count from left to right automatically, but if it is x[::-1], it'll count from right to left.
-So, x[100:96] won't show a value (won't show error) because it counts from left to right, and you gave no value to the right. Instead, you entered a value which is at the left.
-But x[100:96:-1] is possible because it counts from right to left. 
+And if it is x[::-1], it'll count from right to left.
+So, x[6:4] won't show a value (won't show error) because it counts from left to right, and you gave no value to the right. Instead, you entered a value which is at the left.
+But x[6:4:-1] is possible because it counts from right to left. 
 
 Now, if you use x[::2], it'll count from left to right and take every 2nd element.
 x[::-3] means it'll count from right and take every 3rd element.

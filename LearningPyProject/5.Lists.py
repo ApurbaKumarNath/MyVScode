@@ -15,6 +15,7 @@ Since lists are indexed, lists can have items with the same value.
 A list can contain different data types.'''
 
 List_Constructor = list(('abc', 123, 12.3, True, False)) # It is also possible to use the list constructor when creating a new list.
+OneItem = ['One itemed list.',]; print(OneItem)
 print('\n')
 '''
 There are four collection data types in the Python programming language:
@@ -334,7 +335,11 @@ print('\n')
 # Now we will see joining lists:
 print('Joining lists examples:')
 
-joined = copy1 + a12 ; print(joined) # This is one way of joining.
+joined = copy1 + a12
+print(joined) # This is one way of joining. Similarly,
+
+copy1 += a12 # This means copy1 = copy1 + a12
+print(copy1)
 
 # Another way of joining:
 for x in a12:

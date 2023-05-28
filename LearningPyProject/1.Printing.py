@@ -34,6 +34,16 @@ print("I am fine.", end=" \t"); print('He is fine too.')
 #If you need to use a specific string in between every argument, use sep.
 print("hello Work!","How're you?","Working is great.","That's why I like your name.", sep="*|_|*\n")
 
+#Now, check the use of f string = f"{}". For variables, use {}. If you want to write things your way, it's best to use this.
+M = 0
+print(f"{M}^0 = 0") # But things like \n will do their normal jobs here.
+
+# If you wanna show \n or \t, use raw string literal = r"".
+# Here backslashes \ are treated as literal characters instead of having special meaning as escape characters.
+print(r"C:\Users\John\Documents\file.txt and \n \t {M} m[0]") # {} don't work like they do in f"". [] also don't work.
+
+# If you don't want to use r"" to print \n, you can always use escape characters.
+print('\\n and \\t, \'M')
 help(print)
 
 print("""
