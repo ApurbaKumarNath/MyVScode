@@ -79,6 +79,47 @@ print(-5.0//2)
 # To get the modulus:
 print(5%2) # It basically gives you the remainder.
 
+# Negative modulo:
+'''
+Rule number 1:
+If divisor is -, output is also -.
+If divisor is +, output is also +.
+'''
+
+''' 
+When both sides are negative:
+Example: -5 % -4
+Think of it like 5%4 = 1. Output = -1.
+
+For -3 % -4
+Do the same: 3%4 = 3. Output = -3.
+Always follow rule number 1.
+'''
+print(-5 % -4) 
+print(-3 % -4) 
+
+''' 
+When only one side is negative, find the closest divisible number.
+But remember: 
+If the dividend is negative, go to the negative side of the number line to find the divisible number.
+If the divident is positive, go to the positive side of the number line to find the divisible number.
+
+Then the distance between the divisible number and the dividend is the answer. Distance is always +. 
+But don't forget to follow rule number 1.
+'''
+print(5 % -1)
+print(5 % -4) 
+print(-5 % 4) 
+print(5 % -2)
+
+'''
+And it works like:
+-8%4 = 0 and 8%-4 = 0. Because 8 is divisible by 4.
+Basic Rule:
+-5%4 = (-2*4 + 3) % 4 = 3  => This means: -8%4 + 3%4 = 3.
+5%-4 = (2*4 - 3) % -4 = -3
+'''
+
 # Now see the use of random numbers:
 import random
 print(random.randrange(995,999))

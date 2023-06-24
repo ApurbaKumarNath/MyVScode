@@ -53,3 +53,12 @@ else:
 # You cannot keep if statement empty except:
 if 1>2:
     pass # Doesn't matter if you're right or wrong. It will pass which means it'll not print anything.
+
+# How pass statement actually works:
+if 2<3:
+    pass
+elif 3<55:
+    print('c')
+else:
+    print('r')
+# Guess what it'll do. It'll ignore elif and else. Nothing will be printed.
