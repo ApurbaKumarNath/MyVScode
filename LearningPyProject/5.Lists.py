@@ -60,6 +60,12 @@ def c():
   print(List_Example)
 c()  
 
+def c1():
+  List_Example = ['abc', 123, 12.3, True, False, 123]
+  List_Example[1] = "avc", 'acv' # This will create a tuple in index 1 of the list.
+  print(List_Example)
+c1()
+
 def d():
   List_Example = ['abc', 123, 12.3, True, False, 123]
   List_Example[1:3] = "I"
@@ -114,8 +120,8 @@ i()
 
 def j():
   List_Example = ['abc', 123, 12.3, True, False, 123]
-  List_Example.pop(2) # This is also for removing items, but you've to mention the index here.
-  print(List_Example)
+  List_Example.pop(2) # This is also for removing items, but you've to mention the index here. 
+  print(List_Example) # Remember: pop() expects at most 1 argument for Lists, but not for dictionaries.
 j()
 
 def k():
@@ -179,7 +185,7 @@ for d in range(len(List_Example)):
 for e in range(len(List_Example)):
   print(List_Example[e]) # But this time, it'll loop over the list.
 
-# You could say what's the benefit of this! I could just use the line 146 and 147 for it. But no, there is more to it.
+# You could say what's the benefit of this! I could just use the code in line 146 and 147 for it. But no, there is more to it.
 
 print('Now showing the main lesson from range function:')
 for f in range(0, len(List_Example), 2):

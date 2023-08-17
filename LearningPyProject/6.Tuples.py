@@ -16,6 +16,12 @@ print(t3, '\n')
 print("Accessing tuples:")
 print(t1[-1:-3:-1]) # Exactly the same as lists.
 
+nested = ((1, 2), [1, 3], 2.09)
+print(nested[1][1])
+nested[1].append(4) # nested[1] is a list. You can't do the same with nested[0] or nested.
+print(nested)
+
+
 print("Checking if an item exists:")
 if 2 in t1:
     print('Yes, it exists.')
@@ -65,10 +71,15 @@ print(a2, b2); print(c2)
 '''If the asterisk is added to another variable name than the last, 
    Python will assign values to the variable until the number of values left matches the number of variables left.'''
 (a3, *b3, c3) = u2
-print(a3, b3, c3, '\n')
+print(a3, b3, c3)
 
+*a4, b4 = nested # nested = ((1, 2), [1, 3, 4], 2.09)
+print(a4, b4)  # Output a4 = [(1, 2), [1, 3, 4]], b4 = 2.09
 
-
+a5, *b5 = nested
+print(a5, b5, '\n')
+''' *a4 = nested
+    print(a4) won't work. Cz you need atleast one more unpacking variable such as b4. '''
 
 print('Loop Tuples:')
 for x in t1:
@@ -81,8 +92,16 @@ j = 0
 while j < len(t1):
     print(t1[j])
     j += 1
-print('\n')
 
+for z in nested[:2]:  # nested = ((1, 2), [1, 3, 4], 2.09)
+    x, *y = z    # Unpacking with * requires a list or tuple. nested 
+    print(x, y)
+'''
+nested = ((1, 2), [1, 3, 4], 2.09)
+x = nested[2] this is fine, but *x = nested[2] is wrong. *x needs a list or a tuple.
+print(x)
+'''
+print('\n')
 
 
 
