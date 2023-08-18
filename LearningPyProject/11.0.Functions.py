@@ -13,6 +13,7 @@ f3(2, 3)
 
 print('User input examples:')
 def f4(x = int(input('Input a number: '))):
+  # x = 2  # If you did this, python wouldn't take the default value as x. It will take x = 2.
     print(f"{x} x 2 =", x*2, '\n')
 f4()
 
@@ -51,6 +52,38 @@ def f10(x):
 print(f10(2))
 print(f10(3))
 
+
+
+def f11(comments):
+   comments = 33 # Here, this comments isn't equal to parameter (comments). This is counted as a separate variable.
+   return comments//3 # Now, the value 33 will be returned to f11
+f11(17) # Here, you have to give an argument for the parameter (comments)
+print('\nPrinting the returned value:', f11(12)) 
+
+'''
+If you did the f11() code like this:
+def f11():
+   comments = 33 
+   return comments//3
+f11() # This won't print anything.
+print(f11()) # This will print 11.
+
+So, basically what I'm saying is: you can simply do the code without passing arguments if you have to do something like this.
+'''
+
+
+inside = 12
+def f12(inside):
+#  global inside # The parameter name can't be made global. 
+   inside = 1
+   print('\nPrinting only the local variable:', inside)
+f12(11)
+
+
+def f13(inside):
+   return inside*2
+print('\nPrinting global variable:', f13(inside)) # Here, inside = 12
+
 print('\nThe pass Statement: passed')
-def f11(x):
+def f14(x):
   pass
