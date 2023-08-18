@@ -39,23 +39,35 @@ def parameter():
 print(parameter()) # Simply prints 3. Both codes work similarly.
 '''
 
-def default(x = int(input('Number: ')), y = 'haha.'):
-  print('If we call the function without argument, it uses the default value:', x, y)
-default()
-default('One argument given this time,')
-
-print('\nThe order of the arguments does not matter if you use key = value syntax.')
-def order(x, y, z):
-  return (x*y)/z
-Value = order(z = 111, x = 33, y = int(input('Number: ')))
-print(Value, '\n')
-
 
 val = 11
 def globe(val):
   # global val # you can't make the parameter name global inside the function.
   print('You can set a global variable as an argument:', val, '\n') # Here, val = 11
 globe(val)
+
+
+
+
+
+def default(x = int(input('Number: ')), y = 'haha.'):
+  print('If we call the function without argument, it uses the default value:', x, y)
+default()
+default('One argument given this time,')
+
+
+
+
+
+print('\nThe order of the arguments does not matter if you use key = value syntax.')
+def order(x, y, z):
+  return (x*y)/z
+Value = order(z = 111, x = 33, y = int(input('Number: ')))
+print(order(z = 6, x = 33, y = 6))
+print(Value, '\n')
+
+
+
 
 
 print('Using Loop in a function:')
@@ -67,17 +79,25 @@ loop(list1)
 loop({'Tea': 'Nothing'})
 
 
+
+
+
 print('\nUsing * means the function will receive a tuple of arguments.')
 def tup(*t): 
   print(t[1:3])
 tup('string', 123, ('More', 'tuple'), ['A', 'list'])
 
 
+
+
 print('\nUsing ** means the function will receive a dictionary of arguments.')
 def dic(**d):
   print(d.items())
-dic(string = 'Keys of a dict', num = 'can be', tuples = 'str, numbers and tuples.')
+dic(string = ['Keys', 'of a dict'], num = ('can', 'be'), tuples = 'str, numbers and tuples.')
 # Here, string, num and tuples will be set as keys of dictionary d. ['string', 'num', 'tuples']
+
+
+
 
 print('\nThe pass Statement: passed')
 def passing(x):
