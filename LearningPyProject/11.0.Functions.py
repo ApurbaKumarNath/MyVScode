@@ -24,7 +24,10 @@ Step by step execution of the code: for print(parameter(x)).
 5. for any given argument, x = 3 (Only in this code).
 6. returns x to the function.
 7. finally prints 3 (which is the returned value).
-Remember this is how function works.
+Remember this is how function works. 
+
+If you only called the function, parameter(x),
+it would do the first 6 steps but not the 7th step.
 '''
 
 print(f'y has the value of parameter(121), and that is {y}. \n')
