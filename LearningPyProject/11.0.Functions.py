@@ -9,15 +9,25 @@ def parameter(x = 2): # The default value of x is 2.
   print(x)       # It'll print 3. Not 2 nor 10.
   return x       # This means that the value of x will be returned to parameter() function.
   print(111)     # It simply doesn't print because a value is returned. To print it, write it before returning.
-y = parameter(x) # Guess what will be y. Here, y = parameter(10)
+y = parameter(121) # Guess what will be y.
 print(parameter(x)) 
 '''
-Here, x was 10.(Global var) and default value x was 2, but, parameter(any value) = 3 as returned value is 3.
-To conclude, python ignores global variables and default values when a value is returned.
-Python even ignored the argument given. Because locally x was set as 3.
+Here, given argument x = 10 (the global variable), default value was 2. But inside the function, x = 3 (local variable).
+So, for any given or non given argument in this function, x will be set to 3.
+Then, the value 3 will be printed and returned to the function. 
+
+Step by step execution of the code: for print(parameter(x)).
+1. it takes the local variable x = 3.
+2. it prints x.
+3. it takes the argument (here 10).
+4. checks how the argument is applicable in the function.
+5. for any given argument, x = 3 (Only in this code).
+6. returns x to the function.
+7. finally prints 3 (which is the returned value).
+Remember this is how function works.
 '''
 
-print(f'y has the value of parameter(any value), and that is {y}. \n')
+print(f'y has the value of parameter(121), and that is {y}. \n')
 
 '''
 Imagine the previous code in this way:
