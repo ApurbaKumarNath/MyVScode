@@ -1,89 +1,71 @@
-def f1():
-    print('1st function.\n')
-f1()
+def call():
+  print('You can call a function as many times as you want.')
+call()
+call()
 
-def f2(a):
-    print(a**2, '\n')
-f2(10)
-f2(2)
+x = 10
+def parameter(x = 2): # The default value of x is 2.
+  x = 3
+  print(x)       # It'll print 3. Not 2 nor 10.
+  return x       # This means that the value of x will be returned to parameter() function.
+  print(111)     # It simply doesn't print because a value is returned. To print it, write it before returning.
+y = parameter(x) # Guess what will be y. Here, y = parameter(10)
+print(parameter(x)) 
+'''
+Here, x was 10.(Global var) and default value x was 2, but, parameter(any value) = 3 as returned value is 3.
+To conclude, python ignores global variables and default values when a value is returned.
+Python even ignored the argument given. Because locally x was set as 3.
+'''
 
-def f3(x, y):
-    print((x+y)**2, '\n')
-f3(2, 3)
+print(f'y has the value of parameter(any value), and that is {y}. \n')
 
-print('User input examples:')
-def f4(x = int(input('Input a number: '))):
-  # x = 2  # If you did this, python wouldn't take the default value as x. It will take x = 2.
-    print(f"{x} x 2 =", x*2, '\n')
-f4()
+'''
+Imagine the previous code in this way:
+def parameter():
+  return 3
+print(parameter()) # Simply prints 3. Both codes work similarly.
+'''
 
-print('If you do not know how many keyword arguments that will be passed into your function, add: *')
-def f5(*x): # the function will receive a tuple of arguments
-    print('Your 3rd input was: ', x[2], '\n') 
-f5(input(), input(), input(), input())
+def default(x = int(input('Number: ')), y = 'haha.'):
+  print('If we call the function without argument, it uses the default value:', x, y)
+default()
+default('One argument given this time,')
 
-print('The order of the arguments does not matter if you use key = value syntax')
-def f6(a, b, c):
-  print('The variable b is:', b, '\n')
-f6(b = 66, a = 10.09, c = '22')
+print('\nThe order of the arguments does not matter if you use key = value syntax.')
+def order(x, y, z):
+  return (x*y)/z
+Value = order(z = 111, x = 33, y = int(input('Number: ')))
+print(Value, '\n')
 
-print('If you do not know how many keyword arguments that will be passed into your function, add: **')
-def f7(**x): # the function will receive a dictionary of arguments
-  print(x, x['x'], x['a'], '\n')
-f7(a = 10, x = 99)
 
-print('If we call the function without argument, it uses the default value:')
-def f8(x = True):
-  print('The default value is', x)
-f8()
-f8('not False')
+val = 11
+def globe(val):
+  # global val # you can't make the parameter name global inside the function.
+  print('You can set a global variable as an argument:', val, '\n') # Here, val = 11
+globe(val)
 
-print('\nUsing Loop in a function:')
-def f9(L):
+
+print('Using Loop in a function:')
+def loop(L):
   for x in L:
     print(x)
 list1 = [True, 'str', 1.01, 55]
-f9(list1)
-f9(['Tt',])
-
-print('\nTo let a function return a value, use the return statement:')
-def f10(x):
-  return 33 + x
-print(f10(2))
-print(f10(3))
+loop(list1)
+loop({'Tea': 'Nothing'})
 
 
-
-def f11(comments):
-   comments = 33 # Here, this comments isn't equal to parameter (comments). This is counted as a separate variable.
-   return comments//3 # Now, the value 33 will be returned to f11
-f11(17) # Here, you have to give an argument for the parameter (comments)
-print('\nPrinting the returned value:', f11(12)) 
-
-'''
-If you did the f11() code like this:
-def f11():
-   comments = 33 
-   return comments//3
-f11() # This won't print anything.
-print(f11()) # This will print 11.
-
-So, basically what I'm saying is: you can simply do the code without passing arguments if you have to do something like this.
-'''
+print('\nUsing * means the function will receive a tuple of arguments.')
+def tup(*t): 
+  print(t[1:3])
+tup('string', 123, ('More', 'tuple'), ['A', 'list'])
 
 
-inside = 12
-def f12(inside):
-#  global inside # The parameter name can't be made global. 
-   inside = 1
-   print('\nPrinting only the local variable:', inside)
-f12(11)
-
-
-def f13(inside):
-   return inside*2
-print('\nPrinting global variable:', f13(inside)) # Here, inside = 12
+print('\nUsing ** means the function will receive a dictionary of arguments.')
+def dic(**d):
+  print(d.items())
+dic(string = 'Keys of a dict', num = 'can be', tuples = 'str, numbers and tuples.')
+# Here, string, num and tuples will be set as keys of dictionary d. ['string', 'num', 'tuples']
 
 print('\nThe pass Statement: passed')
-def f14(x):
+def passing(x):
   pass
