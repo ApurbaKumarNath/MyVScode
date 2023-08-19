@@ -13,44 +13,44 @@ Similarly, you cannot use a local variable outside of a function. To use, set it
 '''
 
 def call():
+  x = 'Local variable'
   print('You can call a function as many times as you want.')
+  return x
 call()
-call()
+print(call())
 
 x = 10
 def parameter(x = 2): # The default value of x is 2.
-  print(x*2)     # Argument was 10, it'll print 20.
+  print(x*2)
   x = 3
-  print(x)       # It'll print 3. Not 2 nor 10.
-  return x       # This means that the value of x will be returned to parameter() function.
+  print(x)
+  return x
   print(111)     # It simply doesn't print because a value is returned. To print it, write it before returning.
-y = parameter(121) # Guess what will be y.
+y = parameter(121)
 print(parameter(x)) 
 '''
-Here, for returning value, given argument x = 10 (the global variable), default value was 2. But inside the function, x = 3 (local variable).
-So, for any given or non given argument in this function, x will be set to 3 and will be returned to the function.
+Remember: Python prioritizes given argument more than default value.
+Only if no argument is given, python uses the default value as argument. See line 66 to 69 for example.
 
-Step by step execution of the code: for print(parameter(x)).
-0. It takes the argument x = 10 (global variable).
-1. It will print x*2 = 20.
-2. it takes the local variable x = 3.
-3. it prints x.
-4. returns x to the function.
-5. finally prints 3 (which is the returned value). So, parameter(10) = 3. In this function, parameter(any value) = 3.
-Remember this is how function works. 
+Step by step execution of the code:
+1. default value x = 2
+2. as y = parameter(121), the function has been called with the argument 121.
+3. so, it prints 121*2 = 242; then, it takes the local variable x = 3 and prints 3. 
+4. returned value 3 to parameter(121). y = parameter(121) = 3.
+5. for print(parameter(x)), the function has been called with the argument 10. (x = 10 global variable)
+6. it'll print x*2 = 10 * 2 = 20.
+7. x = 3, and prints 3.
+8. returned value 3 to parameter(10). parameter(10) = 3.
+9. finally prints 3 # Actually, In this function, parameter(any value) = 3 as it only returns 3 to the function.
 
-If you only called the function, parameter(x),
-it would do the first 4 steps but not the 5th step.
+Conclusion: function call will work first, then, other stuff. 
+And a function can be called inside from print(as in line 20 and 30) or a variable(as in line 29) or etc.(as in line 87).
+Remember all the print statements inside the function are executed serially when the function is called.
+If returned any value, function(argument) = returned value. If not returned, function(argument) = None.
 '''
 
 print(f'y has the value of parameter(121), and that is {y}. \n')
 
-'''
-Imagine the previous code in this way:
-def parameter():
-  return 3
-print(parameter()) # Simply prints 3. Both codes work similarly.
-'''
 
 
 val = 11
@@ -79,6 +79,13 @@ Value = order(z = 111, x = 33, y = int(input('Number: ')))
 print(order(z = 6, x = 33, y = 6))
 print(Value, '\n')
 
+
+
+
+print('You can call a function to another function.')
+def calling(var):
+  return var * order(6, 2, 3)
+print(calling(10), '\n')
 
 
 
