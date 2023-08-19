@@ -22,7 +22,7 @@ print(call())
 x = 10
 def parameter(x = 2): # The default value of x is 2.
   print(x*2)
-  x = 3
+  x = 3          # This Local variable(x) is never equal to the parameter x.
   print(x)
   return x
   print(111)     # It simply doesn't print because a value is returned. To print it, write it before returning.
