@@ -5,6 +5,7 @@ call()
 
 x = 10
 def parameter(x = 2): # The default value of x is 2.
+  print(x*2)     # Argument was 10, it'll print 20.
   x = 3
   print(x)       # It'll print 3. Not 2 nor 10.
   return x       # This means that the value of x will be returned to parameter() function.
@@ -12,22 +13,23 @@ def parameter(x = 2): # The default value of x is 2.
 y = parameter(121) # Guess what will be y.
 print(parameter(x)) 
 '''
-Here, given argument x = 10 (the global variable), default value was 2. But inside the function, x = 3 (local variable).
-So, for any given or non given argument in this function, x will be set to 3.
-Then, the value 3 will be printed and returned to the function. 
+Here, for returning value, given argument x = 10 (the global variable), default value was 2. But inside the function, x = 3 (local variable).
+So, for any given or non given argument in this function, x will be set to 3 and will be returned to the function.
 
 Step by step execution of the code: for print(parameter(x)).
-1. it takes the local variable x = 3.
-2. it prints x.
-3. it takes the argument (here 10).
-4. checks how the argument is applicable in the function.
-5. for any given argument, x = 3 (Only in this code).
-6. returns x to the function.
-7. finally prints 3 (which is the returned value).
+0. It takes the argument x = 10 (global variable).
+1. It will print x*2 = 20.
+2. it takes the local variable x = 3.
+3. it prints x.
+4. it takes the argument (here 10).
+5. checks how the argument is applicable in the function.
+6. for any given argument, x = 3 (Only in this code).
+7. returns x to the function.
+8. finally prints 3 (which is the returned value).
 Remember this is how function works. 
 
 If you only called the function, parameter(x),
-it would do the first 6 steps but not the 7th step.
+it would do the first 7 steps but not the 8th step.
 '''
 
 print(f'y has the value of parameter(121), and that is {y}. \n')
