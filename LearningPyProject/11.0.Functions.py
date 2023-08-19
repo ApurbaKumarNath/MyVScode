@@ -21,15 +21,12 @@ Step by step execution of the code: for print(parameter(x)).
 1. It will print x*2 = 20.
 2. it takes the local variable x = 3.
 3. it prints x.
-4. it takes the argument (here 10).
-5. checks how the argument is applicable in the function.
-6. for any given argument, x = 3 (Only in this code).
-7. returns x to the function.
-8. finally prints 3 (which is the returned value).
+4. returns x to the function.
+5. finally prints 3 (which is the returned value). So, parameter(10) = 3. In this function, parameter(any value) = 3.
 Remember this is how function works. 
 
 If you only called the function, parameter(x),
-it would do the first 7 steps but not the 8th step.
+it would do the first 4 steps but not the 5th step.
 '''
 
 print(f'y has the value of parameter(121), and that is {y}. \n')
