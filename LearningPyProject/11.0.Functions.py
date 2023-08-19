@@ -1,3 +1,17 @@
+'''
+A function is a block of code which only runs when it is called. 
+You can pass data, known as parameters, into a function. A function can return data as a result.
+
+** You cannot use a variable outside of a function inside a function. To use, set the variable locally.
+   However, you can use a variable outside of a function as an argument of the function.
+**
+** 
+Similarly, you cannot use a local variable outside of a function. To use, set it to global.
+   e.g. global x
+        x = 10 
+**
+'''
+
 def call():
   print('You can call a function as many times as you want.')
 call()
