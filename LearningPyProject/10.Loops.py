@@ -77,3 +77,25 @@ for x in z:
 for x in [12, 'good', 'Hi']:
     pass 
 
+
+
+# Difference between pass and continue:
+def a():
+    for i in range(1, 3):
+        if 2> i:
+            pass   # Pass skips if-else but not the whole loop.
+        else:
+            num = i
+        print('Passed statement successful')
+    print(num)
+a()
+
+def b():
+    for i in range(1, 3):
+        if 2> i:
+            continue    # Continue skips the loop for the specific value.
+        else:
+            num = i
+        print('Passed statement successful')
+    print(num)
+b()

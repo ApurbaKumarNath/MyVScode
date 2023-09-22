@@ -81,6 +81,10 @@ print(Value, '\n')
 
 
 
+print('')
+
+
+
 
 print('You can call a function to another function.')
 def calling(var):
